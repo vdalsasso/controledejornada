@@ -1,5 +1,5 @@
 <?php
-require_once '../App/auth.php';
+require_once '../App/auth-teste.php';
 
 echo $email;
 echo '<br/>';

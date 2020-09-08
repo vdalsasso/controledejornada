@@ -20,9 +20,9 @@ class Connect
         }
     }
 
-    function login($email, $senha) {
+    function login($username, $senha) {
 
-        $this->query = "SELECT * FROM  `usuario` WHERE  `usuemail` =  '$email'";
+        $this->query = "SELECT * FROM  `usuario` WHERE  `usunome` =  '$username'";
         $this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL));
         $this->total = mysqli_num_rows($this->result);
 
@@ -34,11 +34,11 @@ class Connect
 
             echo 'bagulho2';
 
-            if(!strcmp($senha, $this->dados['Senha'])) {
+            if(!strcmp($senha, $this->dados['ususenha'])) {
 
-                $_SESSION[ 'idUsuario'] = $this->dados[ 'usucod'];
-                $_SESSION[ 'email'] = $this->dados[ 'usuemail'];
-                $_SESSION[ 'perm'] = $this->dados[ 'Permissao'];
+                $_SESSION['idUsuario'] = $this->dados['usucod'];
+                $_SESSION['username'] = $this->dados['usunome'];
+                $_SESSION['perm'] = $this->dados['usupermissao'];
 
                 echo 'bagulho3';
 

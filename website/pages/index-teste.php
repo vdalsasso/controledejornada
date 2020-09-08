@@ -1,7 +1,7 @@
 <?php
 require_once '../App/auth-teste.php';
 
-echo $usuario;
+echo $user;
 echo '<br/>';
 echo $perm;
 ?>
