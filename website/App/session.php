@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$username = $_POST['username'];
-$senha = md5($_POST['senha']);
+$username = $_POST['usunome'];
+$senha = md5($_POST['ususenha']);
 
 if($username == NULL || $senha == NULL) {
 

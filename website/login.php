@@ -30,7 +30,7 @@
 
       <form action="App/session.php" method="post">
         <div class="input-group mb-3">
-          <input type="text" name="username" class="form-control" placeholder="Nome">
+          <input type="text" name="usunome" class="form-control" placeholder="Nome">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" name="senha" class="form-control" placeholder="Senha">
+          <input type="password" name="ususenha" class="form-control" placeholder="Senha">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
