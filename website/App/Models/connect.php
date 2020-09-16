@@ -8,7 +8,7 @@ class Connect
     var $localhost = "localhost";
     var $root = "root";
     var $passwd = "";
-    var $database = "controledeestoque";
+    var $database = "controledejornada";
     var $SQL;
 
     public function __construct()
@@ -20,29 +20,23 @@ class Connect
         }
     }
 
-    function login($username, $senha) {
+    function login($email, $senha) {
 
-        $this->query = "SELECT * FROM  `usuario` WHERE  `usunome` =  '$username'";
+        $this->query = "SELECT * FROM  `usuario` WHERE  `usuemail` =  '$email'";
         $this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL));
         $this->total = mysqli_num_rows($this->result);
-
-        echo 'bagulho1';
 
         if($this->total) {
             
             $this->dados = mysqli_fetch_array($this->result);
 
-            echo 'bagulho2';
-
             if(!strcmp($senha, $this->dados['ususenha'])) {
 
                 $_SESSION['idUsuario'] = $this->dados['usucod'];
-                $_SESSION['username'] = $this->dados['usunome'];
+                $_SESSION['email'] = $this->dados['usuemail'];
                 $_SESSION['perm'] = $this->dados['usupermissao'];
 
-                echo 'bagulho3';
-
-                header("Location: ../pages/");
+                header("Location: ../pages/index.php");
             } else {
                 header("Location: ../login.php?alert=2");
             }

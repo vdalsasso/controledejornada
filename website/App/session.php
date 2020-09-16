@@ -1,18 +1,18 @@
 <?php
 session_start();
 
-$username = $_POST['usunome'];
-$senha = md5($_POST['ususenha']);
+$email = $_POST['email'];
+$senha = md5($_POST['senha']);
 
-if($username == NULL || $senha == NULL) {
+if($email == NULL || $senha == NULL) {
 
-    echo "<script>alert('Você deve digitar seu nome e senha');</script>";
+    echo "<script>alert('Você deve digitar seu email e senha');</script>";
     echo "<script> window.location.href='.../login.php'</script>";
     exit;
 } else {
     require_once 'Models/connect.php';
 
-    $connect->login($username, $senha);
+    $connect->login($email, $senha);
 } 
 
 ?>

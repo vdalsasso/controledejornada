@@ -7,7 +7,7 @@ if(!isset($_SESSION["idUsuario"]) || !isset($_SESSION["usuario"])){
     header('Location: ../login-teste.php');
 } else {
 
-    $idUser = $_SESSION["idUsuario"];
-    $user = $_SESSION["usuario"];
+    $idUsuario = $_SESSION["idUsuario"];
+    $usuario = $_SESSION["usuario"];
     $perm = $_SESSION["perm"];
 }

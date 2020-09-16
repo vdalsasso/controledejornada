@@ -21,7 +21,7 @@ class Connect
         }
     }
 
-    function login($username, $senha) {
+    function login($username, $password) {
 
         $this->query = "SELECT * FROM  `user` WHERE  `username` = '$username'";
         $this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL));
@@ -31,13 +31,13 @@ class Connect
             
             $this->dados = mysqli_fetch_array($this->result);
 
-            if(!strcmp($senha, $this->dados['Password'])) {
+            if(!strcmp($password, $this->dados['Password'])) {
 
                 $_SESSION['idUsuario'] = $this->dados['idUser'];
-                $_SESSION['usuario'] = $this->dados['usunome'];
-                $_SESSION['perm'] = $this->dados['usupermissao'];
+                $_SESSION['usuario'] = $this->dados['Username'];
+                $_SESSION['perm'] = $this->dados['Permissao'];
 
-                header("Location: ../pages/");
+                header("Location: ../pages/index-teste.php");
             } else {
                 header("Location: ../login-teste.php?alert=2");
             }
