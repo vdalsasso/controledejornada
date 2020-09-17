@@ -35,8 +35,9 @@ class Connect
                 $_SESSION['idUsuario'] = $this->dados['usucod'];
                 $_SESSION['email'] = $this->dados['usuemail'];
                 $_SESSION['perm'] = $this->dados['usupermissao'];
+                $_SESSION['foto'] = $this->dados['usuimagem'];
 
-                header("Location: ../pages/index.php");
+                header("Location: ../views");
             } else {
                 header("Location: ../login.php?alert=2");
             }

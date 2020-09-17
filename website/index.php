@@ -1,5 +1,11 @@
 <?php
+require_once 'App/auth.php';
 
-header ('Location: login.php');
+if($email && $perm) {
+
+    header('Location: views/index.php');
+} else {
+    header ('Location: login.php');
+}
 
 ?>

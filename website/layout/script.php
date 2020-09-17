@@ -266,16 +266,16 @@ $header = '  <header class="main-header">
       <!-- User Account: style can be found in dropdown.less -->
       <li class="dropdown user user-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-          <span class="hidden-xs">Alexander Pierce</span>
+          <img src="'.$foto.'" class="user-image" alt="User Image">
+          <span class="hidden-xs">'.$email.'</span>
         </a>
         <ul class="dropdown-menu">
           <!-- User image -->
           <li class="user-header">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            <img src="'.$foto.'" class="img-circle" alt="User Image">
 
             <p>
-              Alexander Pierce - Web Developer
+            '.$email.'
               <small>Member since Nov. 2012</small>
             </p>
           </li>
@@ -300,7 +300,7 @@ $header = '  <header class="main-header">
               <a href="#" class="btn btn-default btn-flat">Profile</a>
             </div>
             <div class="pull-right">
-              <a href="#" class="btn btn-default btn-flat">Sign out</a>
+              <a href="destroy.php" class="btn btn-default btn-flat">Sair</a>
             </div>
           </li>
         </ul>
@@ -320,10 +320,10 @@ $aside = '  <aside class="main-sidebar">
   <!-- Sidebar user panel -->
   <div class="user-panel">
     <div class="pull-left image">
-      <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+      <img src="'.$foto.'" class="img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
-      <p>Alexander Pierce</p>
+      <p>'.$email.'</p>
       <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
     </div>
   </div>
