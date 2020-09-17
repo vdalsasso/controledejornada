@@ -37,7 +37,7 @@ class Connect
                 $_SESSION['usuario'] = $this->dados['Username'];
                 $_SESSION['perm'] = $this->dados['Permissao'];
 
-                header("Location: ../pages/index-teste.php");
+                header("Location: ../views/index-teste.php");
             } else {
                 header("Location: ../login-teste.php?alert=2");
             }

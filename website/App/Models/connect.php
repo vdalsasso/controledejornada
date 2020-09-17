@@ -36,7 +36,7 @@ class Connect
                 $_SESSION['email'] = $this->dados['usuemail'];
                 $_SESSION['perm'] = $this->dados['usupermissao'];
 
-                header("Location: ../pages/index.php");
+                header("Location: ../views");
             } else {
                 header("Location: ../login.php?alert=2");
             }
