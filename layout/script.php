@@ -1,6 +1,6 @@
 <?php
 
-$url = 'http://localhost/projetos/website/views/';
+$url = 'http://localhost/controledejornada/website/views/';
 
 $head = '<!DOCTYPE html>
 <html>

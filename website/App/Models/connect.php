@@ -9,7 +9,7 @@
  	var $localhost = "localhost";
  	var $root = "root";
  	var $passwd = "";
- 	var $database = "controlestoque";
+ 	var $database = "controleestoque";
  	var $SQL;
 
 
