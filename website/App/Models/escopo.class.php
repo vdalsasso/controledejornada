@@ -41,7 +41,7 @@
 
  	public function listEscopo($value = NULL){
 
- 		$this->query = "SELECT *FROM `escopo`";
+ 		$this->query = "SELECT * FROM `escopo`";
  		$this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
  		if($this->result){

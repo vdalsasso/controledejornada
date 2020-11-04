@@ -407,6 +407,8 @@ $header = '<header class="main-header">
             <li><a href="'.$url.'prod/addprod.php"><i class="fa fa-circle-o"></i>Add Produtos</a></li>
             <li><a href="'.$url.'itens/"><i class="fa fa-circle-o"></i>Itens</a></li>
             <li><a href="'.$url.'itens/additens.php"><i class="fa fa-circle-o"></i>Add Itens</a></li>
+            <li><a href="'.$url.'usuario/"><i class="fa fa-circle-o"></i>Usuarios</a></li>
+            <li><a href="'.$url.'usuario/addusuario.php"><i class="fa fa-circle-o"></i>Add Usuarios</a></li>
           </ul>
         </li>
 
