@@ -9,7 +9,7 @@
  	var $localhost = "localhost";
  	var $root = "root";
  	var $passwd = "";
- 	var $database = "controleestoque";
+ 	var $database = "controledejornada";
  	var $SQL;
 
 
@@ -24,19 +24,19 @@
 
  	function login($username, $password){
 
- 		$this->query  = "SELECT * FROM `usuario` WHERE `username` = '$username'";
+ 		$this->query  = "SELECT * FROM `usuario` WHERE `usuusername` = '$username'";
  		$this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL));
  		$this->total  = mysqli_num_rows($this->result);
 
  		if($this->total){
 
  			$this->dados = mysqli_fetch_array($this->result);
- 			if(!strcmp($password, $this->dados['Password'])){
+ 			if(!strcmp($password, $this->dados['ususenha'])){
 
- 				$_SESSION['idUsuario'] = $this->dados['idUser'];
- 				$_SESSION['usuario']   = $this->dados['Username'];
- 				$_SESSION['perm']      = $this->dados['Permissao'];
- 				$_SESSION['foto']      = $this->dados['imagem'];
+ 				$_SESSION['idUsuario'] = $this->dados['usucod'];
+ 				$_SESSION['usuario']   = $this->dados['usuusername'];
+ 				$_SESSION['perm']      = $this->dados['usupermissao'];
+ 				$_SESSION['foto']      = $this->dados['usuimagem'];
 
  				header("Location: ../views/");
  			}else{
@@ -45,7 +45,7 @@
  		}else{
  				header("Location: ../login.php?alert=1");
  			}
- 	}
- 	
+ 	}	
  }
+
 $connect = new Connect; 

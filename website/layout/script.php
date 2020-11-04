@@ -413,6 +413,20 @@ $header = '<header class="main-header">
         <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i>
+            <span>Escopos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="'.$url.'escopo/"><i class="fa fa-circle-o"></i>Escopos</a></li>
+            <li><a href="'.$url.'escopo/addescopo.php"><i class="fa fa-circle-o"></i>Add Escopos</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i>
             <span>Fabricante</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

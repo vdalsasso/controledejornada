@@ -6,12 +6,12 @@
 
  require_once 'connect.php';
 
-  class Produtos extends Connect
+ class Escopo extends Connect
  {
  	
  	public function index()
  	{
- 		$this->query = "SELECT *FROM `produto`";
+ 		$this->query = "SELECT *FROM `escopo`";
  		$this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
  		if($this->result){
@@ -24,9 +24,9 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <!-- checkbox -->
-                  <input type="checkbox" value="'.$row['CodRefProduto'].'">
+                  <input type="checkbox" value="'.$row['esccod'].'">
                   <!-- todo text -->
-                  <span class="text"><span class="badge left">'.$row['CodRefProduto'].'</span> '.$row['NomeProduto'].'</span>
+                  <span class="text"><span class="badge left">'.$row['esccod'].'</span> '.$row['escnome'].'</span>
                   <!-- Emphasis label -->
                   <!-- <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small> -->
                   <!-- General tools such as edit or delete-->
@@ -39,34 +39,34 @@
  		}
  	}
 
- 	public function listProdutos($value = NULL){
+ 	public function listEscopo($value = NULL){
 
- 		$this->query = "SELECT *FROM `produto`";
+ 		$this->query = "SELECT *FROM `escopo`";
  		$this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
  		if($this->result){
  		
  			while ($row = mysqli_fetch_array($this->result)) {
-       			if($value == $row['CodRefProduto']){ 
+       			if($value == $row['esccod']){ 
           			$selected = "selected";
         		}else{
           			$selected = "";
         		}
- 				echo '<option value="'.$row['CodRefProduto'].'" '.$selected.' >'.$row['NomeProduto'].'</option>';
+ 				echo '<option value="'.$row['esccod'].'" '.$selected.' >'.$row['escnome'].'</option>';
  			}
  		}	
  	}
 
- 	public function InsertProd($nomeProduto, $idUsuario){
+ 	public function InsertEscopo($escNome){
 
- 		$this->query = "INSERT INTO `produto`(`CodRefProduto`, `NomeProduto`, `Usuario_idUser`) VALUES (NULL,'$nomeProduto','$idUsuario')";
+ 		$this->query = "INSERT INTO `escopo`(`esccod`, `escnome`) VALUES (NULL,'$escNome')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
- 			header('Location: ../../views/prod/index.php?alert=1');
+ 			header('Location: ../../views/escopo/index.php?alert=1');
  		}else{
- 			header('Location: ../../views/prod/index.php?alert=0');
+ 			header('Location: ../../views/escopo/index.php?alert=0');
  		}
  	}
  }
 
- $produtos = new Produtos;
+ $escopo = new Escopo;
