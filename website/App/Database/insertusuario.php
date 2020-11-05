@@ -11,18 +11,19 @@ $usuSenha = $_POST['ususenha'];
 $usuImagem = $_POST['usuimagem'];
 $usuFone = $_POST['usufone'];
 $usuPermissao = $_POST['usupermissao'];
-$escopo_esccod = $_POST['escopo_esccod'];
+$escopo_esccod = $_POST['esccod'];
 
-$iduser = $_POST['iduser'];
+//$iduser = $_POST['iduser'];
 
 if($usuUsername != NULL){
-
 	if(isset($_POST['usucod'])){
-		$usuCod = $_POST['uscod'];
-		$usuarios->updateUsuario($usucod, $usuUsername, $usuNome, $usuEmail, $usuSenha, $usuImagem, $usuFone, $usuPermissao, $escopo_esccod);
+
+		$usuCod = $_POST['usucod'];
+		$usuarios->editUsuario($usuCod, $usuUsername, $usuEmail, $usuSenha, $usuImagem, $usuFone, $usuPermissao, $escopo_esccod);
 	}else{
-		$usuarios->InsertUsuario($usucod, $usuUsername, $usuNome, $usuEmail, $usuSenha, $usuImagem, $usuFone, $usuPermissao, $escopo_esccod);
+		$usuarios->InsertUsuario($usuUsername, $usuNome, $usuEmail, $usuSenha, $usuImagem, $usuFone, $usuPermissao, $escopo_esccod);
 	}
+
 }else{
 	header('Location: ../../views/usuario/index.php?alert=3');
  }

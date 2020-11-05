@@ -62,9 +62,9 @@ class Usuario extends Connect
 
  	}
 
- 	public function InsertUsuarios($usuUsername, $usuNome, $usuEmail, $usuSenha, $usuImagem, $usuFone, $usuPermissao, $escopo_esccod){
+ 	public function InsertUsuario($usuUsername, $usuNome, $usuEmail, $usuSenha, $usuImagem, $usuFone, $usuPermissao, $escopo_esccod){
 
- 		$this->query = "INSERT INTO `usuario`(`usucod`, `usuusername`, `usunome`, `usuemail`, `ususenha`, `usuimagem`, `usufone`, `usupermissao`, `usuativo`, `escopo_esccod`) VALUES (NULL, '$usuUsername', '$usuNome', $usuEmail, '$usuSenha', '$usuImagem', '$usuFone', '$usuPermissao', 1, '$escopo_esccod')";
+ 		$this->query = "INSERT INTO `usuario`(`usucod`, `usuusername`, `usunome`, `usuemail`, `ususenha`, `usuimagem`, `usufone`, `usupermissao`, `usuativo`, `escopo_esccod`) VALUES (NULL, '$usuUsername', '$usuNome', '$usuEmail', '$usuSenha', '$usuImagem', '$usuFone', '$usuPermissao', 1, '$escopo_esccod')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
  			header('Location: ../../views/usuario/index.php?alert=1');

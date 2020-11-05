@@ -31,17 +31,13 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Cadastrar Usuário</h3>
+              <h3 class="box-title">Produto</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-              <form role="form" action="../../App/Database/insertusuario.php" method="POST">
+            <form role="form" action="../../App/Database/insertusuario.php" method="POST">
               <div class="box-body">
-                <div class="form-group">
-            ';
-
-
-            echo '</select>
+              	<div class="form-group">
             </div>
 
                 <div class="form-group">
@@ -75,11 +71,14 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
                 </div>
 
 
-                <label for="exampleInputEmail1">Escopo</label>
-  
-               ';
+                <label for="exampleInputEmail1">Nome do Escopo</label>
 
-              $escopo->listEscopo();
+                <select class="form-control" name="esccod">
+                ';
+                $escopo->listEscopo();
+                echo '</select>
+  
+               '; 
 
               echo ' <!-- /.box-body -->
 
