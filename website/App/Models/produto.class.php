@@ -34,12 +34,9 @@
                     <i class="fa fa-edit"></i>
                     <i class="fa fa-trash-o"></i>
                   </div>
-                </li>';
-                 				
+                </li>'; 				
  			}
- 			
  		}
-
  	}
 
  	public function listProdutos($value = NULL){
@@ -50,16 +47,15 @@
  		if($this->result){
  		
  			while ($row = mysqli_fetch_array($this->result)) {
-        if($value == $row['CodRefProduto']){ 
-          $selected = "selected";
-        }else{
-          $selected = "";
-        }
+       			if($value == $row['CodRefProduto']){ 
+          			$selected = "selected";
+        		}else{
+          			$selected = "";
+        		}
  				echo '<option value="'.$row['CodRefProduto'].'" '.$selected.' >'.$row['NomeProduto'].'</option>';
  			}
-
+ 		}	
  	}
- }
 
  	public function InsertProd($nomeProduto, $idUsuario){
 
@@ -70,8 +66,6 @@
  		}else{
  			header('Location: ../../views/prod/index.php?alert=0');
  		}
-
-
  	}
  }
 

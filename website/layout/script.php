@@ -9,7 +9,7 @@ $head = '<!DOCTYPE html>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-language" content="pt-br" /> 
-  <title>AdminLTE 2 | Dashboard</title>
+  <title>Controle de Jornada = Área administrativa</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -284,7 +284,7 @@ $header = '<header class="main-header">
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="'.$url.''.$foto.'" class="user-image" alt="User Image">
-              <span class="hidden-xs">'.$email.'</span>
+              <span class="hidden-xs">'.$usuario.'</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -292,7 +292,7 @@ $header = '<header class="main-header">
                 <img src="'.$url.''.$foto.'" class="img-circle" alt="User Image">
 
                 <p>
-                  '.$email.' - Web Developer
+                  '.$usuario.' - Web Developer
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -341,7 +341,7 @@ $header = '<header class="main-header">
           <img src="'.$url.''.$foto.'" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>'.$email.'</p>
+          <p>'.$usuario.'</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -359,41 +359,7 @@ $header = '<header class="main-header">
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Widgets</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span>
-          </a>
-        </li>
+
         <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i>
@@ -407,6 +373,22 @@ $header = '<header class="main-header">
             <li><a href="'.$url.'prod/addprod.php"><i class="fa fa-circle-o"></i>Add Produtos</a></li>
             <li><a href="'.$url.'itens/"><i class="fa fa-circle-o"></i>Itens</a></li>
             <li><a href="'.$url.'itens/additens.php"><i class="fa fa-circle-o"></i>Add Itens</a></li>
+            <li><a href="'.$url.'usuario/"><i class="fa fa-circle-o"></i>Usuarios</a></li>
+            <li><a href="'.$url.'usuario/addusuario.php"><i class="fa fa-circle-o"></i>Add Usuarios</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i>
+            <span>Escopos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="'.$url.'escopo/"><i class="fa fa-circle-o"></i>Escopos</a></li>
+            <li><a href="'.$url.'escopo/addescopo.php"><i class="fa fa-circle-o"></i>Add Escopos</a></li>
           </ul>
         </li>
 
