@@ -197,6 +197,21 @@ $header = '<header class="main-header">
             <li><a href="'.$url.'escopo/addescopo.php"><i class="fa fa-circle-o"></i>Adicionar Escopos</a></li>
           </ul>
         </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i>
+            <span>Veículos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="'.$url.'veiculo/"><i class="fa fa-circle-o"></i>Lista de Veículos</a></li>
+            <li><a href="'.$url.'veiculo/addveiculo.php"><i class="fa fa-circle-o"></i>Adicionar Veículos</a></li>
+          </ul>
+        </li>
+
     </section>
     <!-- /.sidebar -->
   </aside>';
