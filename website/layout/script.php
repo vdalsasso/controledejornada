@@ -91,13 +91,13 @@ $header = '<header class="main-header">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="'.$url.''.$foto.'" class="user-image" alt="User Image">
+              <img src="'.$url.''.$foto.'" class="user-image" alt="Imagem">
               <span class="hidden-xs">'.$usuario.'</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="'.$url.''.$foto.'" class="img-circle" alt="User Image">
+                <img src="'.$url.''.$foto.'" class="img-circle" alt="Imagem">
 
                 <p>
                   '.$usuario.' - Web Developer
@@ -156,7 +156,7 @@ $header = '<header class="main-header">
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <input type="text" name="q" class="form-control" placeholder="Pesquisa...">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
@@ -166,7 +166,7 @@ $header = '<header class="main-header">
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="header">MAIN NAVIGATION</li>
+        <li class="header">NAVEGAÇÃO</li>
 
         <li class="treeview">
         <a href="#">
@@ -177,8 +177,8 @@ $header = '<header class="main-header">
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="'.$url.'usuario/"><i class="fa fa-circle-o"></i>Escopos</a></li>
-          <li><a href="'.$url.'usuario/addusuario.php"><i class="fa fa-circle-o"></i>Add Usuarios</a></li>
+          <li><a href="'.$url.'usuario/"><i class="fa fa-circle-o"></i>Lista de Usuários</a></li>
+          <li><a href="'.$url.'usuario/addusuario.php"><i class="fa fa-circle-o"></i>Adicionar Usuarios</a></li>
         </ul>
       </li>
 
@@ -193,8 +193,8 @@ $header = '<header class="main-header">
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="'.$url.'escopo/"><i class="fa fa-circle-o"></i>Escopos</a></li>
-            <li><a href="'.$url.'escopo/addescopo.php"><i class="fa fa-circle-o"></i>Add Escopos</a></li>
+            <li><a href="'.$url.'escopo/"><i class="fa fa-circle-o"></i>Lista de Escopos</a></li>
+            <li><a href="'.$url.'escopo/addescopo.php"><i class="fa fa-circle-o"></i>Adicionar Escopos</a></li>
           </ul>
         </li>
     </section>
