@@ -54,7 +54,7 @@ class Motorista extends Connect
 
  	public function insertMotorista($motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $MotDtAfast, $motSituacao){
 
- 		$this->query = "INSERT INTO `motorista`(`motcod`, `motrua`, `motbairro`, `motcidade`, `motestado`, `motemail`, `motsenha`, `motfone`, `motcpf`, `motrg`, `motcnh`, `motdtadmissao`, `motdtafast`, `motsituacao`) VALUES (NULL, '$motNome', '$motRua', '$motBairro', '$motCidade', '$motEstado', '$motEmail', '$motSenha', '$motFone', '$motCpf', '$motRg', '$motCnh', '$motDtAdmissao', '$motDtAdmissao', '$motSituacao')";
+ 		$this->query = "INSERT INTO `motorista`(`motcod`, `motnome`, `motrua`, `motbairro`, `motcidade`, `motestado`, `motemail`, `motsenha`, `motfone`, `motcpf`, `motrg`, `motcnh`, `motdtadmissao`, `motdtafast`, `motsituacao`) VALUES (NULL, '$motNome', '$motRua', '$motBairro', '$motCidade', '$motEstado', '$motEmail', '$motSenha', '$motFone', '$motCpf', '$motRg', '$motCnh', '$motDtAdmissao', '$motDtAdmissao', '$motDtAfast','$motSituacao')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
  			header('Location: ../../views/motorista/index.php?alert=1');
