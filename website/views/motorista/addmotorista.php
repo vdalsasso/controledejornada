@@ -41,34 +41,81 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
             </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Placa:</label>
+                  <label for="exampleInputEmail1">Nome:</label>
                   <input type="text" name="motnome" class="form-control" id="exampleInputEmail1" placeholder="Informe o nome...">
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Ano:</label>
-                  <input type="text" name="veiano" class="form-control" id="exampleInputEmail1" placeholder="Informe o ano do veículo...">
+                  <label for="exampleInputEmail1">Rua:</label>
+                  <input type="text" name="motrua" class="form-control" id="exampleInputEmail1" placeholder="Informe o nome da rua...">
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Modelo:</label>
-                  <input type="text" name="veimodelo" class="form-control" id="exampleInputEmail1" placeholder="Informe o modelo...">
+                  <label for="exampleInputEmail1">Bairro:</label>
+                  <input type="text" name="motbairro" class="form-control" id="exampleInputEmail1" placeholder="Informe o bairro...">
                 </div>
 
-                <label for="exampleInputEmail1">Tipo do veículo (caminhão, ônibus...):</label>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Cidade:</label>
+                  <input type="text" name="motcidade" class="form-control" id="exampleInputEmail1" placeholder="Informe a cidade...">
+                </div>
 
-                <select class="form-control" name="tpvcod">
-                ';
-                $tpMotorista->listTpMotorista();
-                echo '</select>
-  
-               '; 
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Estado:</label>
+                  <input type="text" name="motestado" class="form-control" id="exampleInputEmail1" placeholder="Informe o estado...">
+                </div>
 
-              echo ' <!-- /.box-body -->
+                
+                <div class="form-group">
+                  <label for="exampleInputEmail1">E-mail:</label>
+                  <input type="text" name="motemail" class="form-control" id="exampleInputEmail1" placeholder="Informe o e-mail...">
+                </div>
+                
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Senha:</label>
+                  <input type="text" name="motsenha" class="form-control" id="exampleInputEmail1" placeholder="Informe a senha...">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Fone:</label>
+                  <input type="text" name="motfone" class="form-control" id="exampleInputEmail1" placeholder="Informe o fone...">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">CPF:</label>
+                  <input type="text" name="motcpf" class="form-control" id="exampleInputEmail1" placeholder="Informe o CPF...">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">RG:</label>
+                  <input type="text" name="motrg" class="form-control" id="exampleInputEmail1" placeholder="Informe o RG...">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">CNH:</label>
+                  <input type="text" name="motcnh" class="form-control" id="exampleInputEmail1" placeholder="Informe o cnh...">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Data admissão:</label>
+                  <input type="text" name="motdtadmissao" class="form-control" id="exampleInputEmail1" placeholder="Informe a data de admissao...">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Data afastamento:</label>
+                  <input type="text" name="motdtafast" class="form-control" id="exampleInputEmail1" placeholder="Informe a data de afast...">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Situação:</label>
+                  <input type="text" name="motsituacao" class="form-control" id="exampleInputEmail1" placeholder="Informe a situação...">
+                </div>
+              
+              <!-- /.box-body -->
 
               <div class="box-footer">
                 <button type="submit" name="upload" class="btn btn-primary" value="Cadastrar">Cadastrar</button>
-                <a class="btn btn-danger" href="../../views/veiculo">Cancelar</a>
+                <a class="btn btn-danger" href="../../views/motorista">Cancelar</a>
               </div>
             </form>
           </div>

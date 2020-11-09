@@ -13,6 +13,7 @@ $motEmail = $_POST['motemail'];
 $motSenha = $_POST['motsenha'];
 $motFone = $_POST['motfone'];
 $motCpf = $_POST['motcpf'];
+$motRg = $_POST['motrg'];
 $motCnh = $_POST['motcnh'];
 $motDtAdmissao = $_POST['motdtadmissao'];
 $motDtAfast = $_POST['motdtafast'];

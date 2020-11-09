@@ -52,9 +52,9 @@ class Motorista extends Connect
 
  	}
 
- 	public function insertMotorista($motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $MotDtAfast, $motSituacao){
+ 	public function insertMotorista($motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao){
 
- 		$this->query = "INSERT INTO `motorista`(`motcod`, `motnome`, `motrua`, `motbairro`, `motcidade`, `motestado`, `motemail`, `motsenha`, `motfone`, `motcpf`, `motrg`, `motcnh`, `motdtadmissao`, `motdtafast`, `motsituacao`) VALUES (NULL, '$motNome', '$motRua', '$motBairro', '$motCidade', '$motEstado', '$motEmail', '$motSenha', '$motFone', '$motCpf', '$motRg', '$motCnh', '$motDtAdmissao', '$motDtAdmissao', '$motDtAfast','$motSituacao')";
+ 		$this->query = "INSERT INTO `motorista`(`motcod`, `motnome`, `motrua`, `motbairro`, `motcidade`, `motestado`, `motemail`, `motsenha`, `motfone`, `motcpf`, `motrg`, `motcnh`, `motdtadmissao`, `motdtafast`, `motsituacao`) VALUES (NULL, '$motNome', '$motRua', '$motBairro', '$motCidade', '$motEstado', '$motEmail', '$motSenha', '$motFone', '$motCpf', '$motRg', '$motCnh', '$motDtAdmissao', '$motDtAfast','$motSituacao')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
  			header('Location: ../../views/motorista/index.php?alert=1');
@@ -71,20 +71,20 @@ class Motorista extends Connect
     if($row = mysqli_fetch_array($this->result)){
 
         $motcod = $row['motcod'];
-        $motNome = $row['veiplaca'];
-        $motRua = $row['veiano'];
-        $motBairro = $row['veimodelo'];
-        $motCidade = $row['veiplaca'];
-        $motEstado = $row['veiano'];
-        $motEmail = $row['veimodelo'];
-        $motSenha = $row['veiplaca'];
-        $motFone = $row['veiano'];
-        $motCpf = $row['veimodelo'];
-        $motRg = $row['veiplaca'];
-        $motCnh = $row['veiano'];
-        $motDtAdmissao = $row['veimodelo'];
-        $motDtAfast = $row['veiplaca'];
-        $motSituacao = $row['veiano'];
+        $motNome = $row['motnome'];
+        $motRua = $row['motrua'];
+        $motBairro = $row['motbairro'];
+        $motCidade = $row['motcidade'];
+        $motEstado = $row['motestado'];
+        $motEmail = $row['motemail'];
+        $motSenha = $row['motsenha'];
+        $motFone = $row['motfone'];
+        $motCpf = $row['motcpf'];
+        $motRg = $row['motrg'];
+        $motCnh = $row['motcnh'];
+        $motDtAdmissao = $row['motdtadmissao'];
+        $motDtAfast = $row['motdtafast'];
+        $motSituacao = $row['motsituacao'];
         
        return $resp = array('Itens' => ['motcod' => $motcod,
                       'motnome'   => $motNome,

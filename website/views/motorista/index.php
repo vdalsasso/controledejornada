@@ -1,7 +1,7 @@
 <?php
 require_once '../../App/auth.php';
 require_once '../../layout/script.php';
-require_once '../../App/Models/escopo.class.php';
+require_once '../../App/Models/motorista.class.php';
 
 echo $head;
 echo $header;
@@ -14,7 +14,7 @@ echo '<div class="content-wrapper">
       </h1>
       <ol class="breadcrumb">
         <li><a href="../"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Escopos</li>
+        <li class="active">Motoristas</li>
       </ol>
     </section>
 
@@ -29,7 +29,7 @@ echo '<div class="content-wrapper">
             <div class="box-header">
               <i class="ion ion-clipboard"></i>
 
-              <h3 class="box-title">Lista de Escopos</h3>
+              <h3 class="box-title">Lista de Motoristas</h3>
 
               <div class="box-tools pull-right">
                 <ul class="pagination pagination-sm inline">
@@ -44,13 +44,13 @@ echo '<div class="content-wrapper">
             <!-- /.box-header -->
             <div class="box-body">
               <ul class="todo-list">';
-               $escopo->index();
+               $motoristas->index();
               
         echo '</ul>
             </div>
             <!-- /.box-body -->
             <div class="box-footer clearfix no-border">
-              <a href="addescopo.php" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add Escopo</a>
+              <a href="addmotorista.php" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Adicionar Motorista</a>
             </div>
           </div>
 	 
