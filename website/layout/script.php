@@ -226,6 +226,8 @@ $header = '<header class="main-header">
         </ul>
       </li>
 
+      <li class="header">REGRAS DE JORNADA</li>
+
     </section>
     <!-- /.sidebar -->
   </aside>';

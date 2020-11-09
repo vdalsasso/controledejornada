@@ -6,10 +6,12 @@
 
  require_once 'connect.php';
 
-class Motorista extends Connect {
+class Regras extends Connect
+ {
  	
- 	public function index() {
- 		$this->query = "SELECT * FROM `motorista`";
+ 	public function index()
+ 	{
+ 		$this->query = "SELECT * FROM `regrasjornada`";
  		$this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
  		if($this->result){
@@ -23,22 +25,22 @@ class Motorista extends Connect {
                       </span>
                   <span class="text">
                   <!-- checkbox -->
-                  <form class="badge" name="ativ'.$row['motcod'].'" action="action.php" method="post">
-                  <input type="hidden" name="id" id="id" value="'.$row['motcod'].'">
+                  <form class="badge" name="ativ'.$row['rjocod'].'" action="action.php" method="post">
+                  <input type="hidden" name="id" id="id" value="'.$row['rjocod'].'">
                   <input type="checkbox" id="status" name="status"</form>
                   <!-- todo text -->
-                  <span class="badge left">'.$row['motcod'].'</span> '.$row['motnome'].'</span>
+                  <span class="badge left">'.$row['rjocod'].'</span> '.$row['rjonome'].'</span>
 
                   <!-- Emphasis label -->
                   
                   <!-- General tools such as edit or delete-->
                   <div class="tools right">
                     
-                    <form class="right" name="editMotorista'.$row['motcod'].'" action="editMotorista.php" method="post">
-                      <input type="hidden" name="motcod" id="motcod" value="'.$row['motcod'].'">
+                    <form class="right" name="editRegras'.$row['rjocod'].'" action="editRegras.php" method="post">
+                      <input type="hidden" name="rjocod" id="rjocod" value="'.$row['rjocod'].'">
                       <a href="#" type="button" onclick="this.form.submit();"><i class="fa fa-edit"></i></a></form>
-                    <form class="right" name="delMotorista'.$row['motcod'].'" action="delMotorista.php" method="post">
-                    <input type="hidden" name="motcod" id="motcod" value="'.$row['motcod'].'">
+                    <form class="right" name="delRegras'.$row['rjocod'].'" action="delRegras.php" method="post">
+                    <input type="hidden" name="rjocod" id="rjocod" value="'.$row['rjocod'].'">
                      <a href="#" type="button" onclick="this.form.submit();"><i class="fa fa-trash-o"></i></a></form>
                   </div>
                 </li>';
@@ -49,7 +51,7 @@ class Motorista extends Connect {
 
  	}
 
- 	public function InsertMotorista($motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao){
+ 	public function InsertRegras($rjoNome, $rjoTrabInint, $rjoDesc, $rjoDescInint, $rjoRefeicao, $rjoMaxDia, $rjoExtra, $RjoEspRep, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao){
 
     $this->query = "INSERT INTO `motorista`(`motcod`, `motnome`, `motrua`, `motbairro`, `motcidade`, `motestado`, `motemail`, `motsenha`, `motfone`, `motcpf`, `motrg`, `motcnh`, `motdtadmissao`, `motdtafast`, `motsituacao`) VALUES (NULL, '$motNome', '$motRua', '$motBairro', '$motCidade', '$motEstado', '$motEmail', '$motSenha', '$motFone', '$motCpf', '$motRg', '$motCnh', '$motDtAdmissao', '$motDtAfast','$motSituacao')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
@@ -60,7 +62,8 @@ class Motorista extends Connect {
  		}
  	}//InsertItens
 
-  public function editMotorista($value) {
+  public function editMotorista($value)
+  {
     $this->query = "SELECT *FROM `motorista` WHERE `motcod` = '$value'";
     $this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
@@ -101,7 +104,8 @@ class Motorista extends Connect {
     
   }
 
-  public function updateMotorista($motCod, $motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao) {
+  public function updateMotorista($motCod, $motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao)
+  {
     $this->query = "UPDATE `motorista` SET 
                     `motnome`= '$motNome',
                     `motrua`='$motRua',
@@ -119,9 +123,10 @@ class Motorista extends Connect {
                     `motsituacao`='$motSituacao',
                     WHERE `motcod`= '$motCod'";
 
-    if ($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
+    if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
+
       header('Location: ../../views/motorista/index.php?alert=1');
-    } else {
+    }else{
       header('Location: ../../views/motorista/index.php?alert=0');
     }
 
