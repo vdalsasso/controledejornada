@@ -1,17 +1,17 @@
 <?php
 
 /*
- Class escopo
+ Class cidade
 */
 
  require_once 'connect.php';
 
- class Escopo extends Connect
+ class Cidade extends Connect
  {
  	
  	public function index()
  	{
- 		$this->query = "SELECT *FROM `escopo`";
+ 		$this->query = "SELECT * FROM `cidade`";
  		$this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
  		if($this->result){
