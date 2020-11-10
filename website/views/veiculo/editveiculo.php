@@ -1,12 +1,12 @@
 <?php
 require_once '../../App/auth.php';
 require_once '../../layout/script.php';
-require_once '../../App/Models/usuario.class.php';
-require_once '../../App/Models/escopo.class.php';
+require_once '../../App/Models/tpveiculo.class.php';
+require_once '../../App/Models/veiculo.class.php';
 
-if(isset($_POST['usucod'])){
+if(isset($_POST['veicod'])){
 
-$resp = $usuarios->editUsuario($_POST['usucod']);
+$resp = $veiculos->editVeiculo($_POST['veicod']);
 
 
 echo $head;
@@ -17,11 +17,11 @@ echo '<div class="content-wrapper">';
 echo '<!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Adicionar <small>Usuarios</small>
+        Adicionar <small>Veículos</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="../"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Itens</li>
+        <li class="active">Veiculos</li>
       </ol>
     </section>
 
@@ -42,7 +42,7 @@ echo '
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" action="../../App/Database/insertusuario.php" method="POST">
+            <form role="form" action="../../App/Database/insertveiculo.php" method="POST">
               <div class="box-body">
               	<div class="form-group">
             ';
@@ -51,18 +51,18 @@ echo '
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1">Username</label>
-              <input type="text" name="usuusername" class="form-control" id="exampleInputEmail1" placeholder="usuusername">
+              <label for="exampleInputEmail1">Placa</label>
+              <input type="text" name="veiplaca" class="form-control" id="exampleInputEmail1" placeholder="Insira a placa...">
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1">Nome</label>
-              <input type="text" name="usunome" class="form-control" id="exampleInputEmail1" placeholder="usunome">
+              <label for="exampleInputEmail1">Ano</label>
+              <input type="text" name="veiano" class="form-control" id="exampleInputEmail1" placeholder="Insira o ano do veiculo...">
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input type="text" name="usuemail" class="form-control" id="exampleInputEmail1" placeholder="usuemail">
+              <label for="exampleInputEmail1">Modelo</label>
+              <input type="text" name="veimodelo" class="form-control" id="exampleInputEmail1" placeholder="Insira o modelo do carro...">
             </div>
           
             <div class="form-group">
@@ -80,13 +80,16 @@ echo '
               <input type="text" name="usufone" class="form-control" id="exampleInputEmail1" placeholder="usufone">
             </div>
 
-              <label for="exampleInputEmail1">Nome do Escopo</label>
+            <label for="exampleInputEmail1">Tipo do veículo (caminhão, ônibus...):</label>
 
-              <select class="form-control" name="esccod">';
-              $escopo->listEscopo($resp['escopo']['esccod']);
+            <select class="form-control" name="tpvcod">
+            ';
+            $tpVeiculo->listTpVeiculo();
+            echo '</select>
 
-              echo '
-              <!-- /.box-body -->
+           '; 
+
+          echo ' <!-- /.box-body -->
 
               <div class="box-footer">
                 <button type="submit" name="upload" class="btn btn-primary" value="Cadastrar">Cadastrar</button>
