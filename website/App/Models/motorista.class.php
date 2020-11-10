@@ -49,9 +49,9 @@ class Motorista extends Connect {
 
  	}
 
- 	public function InsertMotorista($motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao){
+ 	public function InsertMotorista($motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao, $regrasjornada_rjocod){
 
-    $this->query = "INSERT INTO `motorista`(`motcod`, `motnome`, `motrua`, `motbairro`, `motcidade`, `motestado`, `motemail`, `motsenha`, `motfone`, `motcpf`, `motrg`, `motcnh`, `motdtadmissao`, `motdtafast`, `motsituacao`) VALUES (NULL, '$motNome', '$motRua', '$motBairro', '$motCidade', '$motEstado', '$motEmail', '$motSenha', '$motFone', '$motCpf', '$motRg', '$motCnh', '$motDtAdmissao', '$motDtAfast','$motSituacao')";
+    $this->query = "INSERT INTO `motorista`(`motcod`, `motnome`, `motrua`, `motbairro`, `motcidade`, `motestado`, `motemail`, `motsenha`, `motfone`, `motcpf`, `motrg`, `motcnh`, `motdtadmissao`, `motdtafast`, `motsituacao`, `regrasjornada_rjocod`) VALUES (NULL, '$motNome', '$motRua', '$motBairro', '$motCidade', '$motEstado', '$motEmail', '$motSenha', '$motFone', '$motCpf', '$motRg', '$motCnh', '$motDtAdmissao', '$motDtAfast','$motSituacao','$regrasjornada_rjocod')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
  			header('Location: ../../views/motorista/index.php?alert=1');
@@ -81,6 +81,7 @@ class Motorista extends Connect {
       $motDtAdmissao = $row['motdtadmissao'];
       $motDtAfast = $row['motdtafast'];
       $motSituacao = $row['motsituacao'];
+      $regrasjornada_rjocod = $row['regrasjornada_rjocod'];
         
       return $resp = array('Itens' => ['motcod' => $motcod,
       'motnome'   => $motNome,
@@ -96,12 +97,13 @@ class Motorista extends Connect {
       'motcnh' => $motCnh,
       'motdtadmissao' => $motDtAdmissao,
       'motdtafast'   => $motDtAfast,
-      'motsituacao' => $motSituacao] , ); 
+      'motsituacao' => $motSituacao,
+      'regrasjornada_rjocod' => $regrasjornada_rjocod] , ); 
      }
     
   }
 
-  public function updateMotorista($motCod, $motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao) {
+  public function updateMotorista($motCod, $motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao, $regrasjornada_rjocod) {
     $this->query = "UPDATE `motorista` SET 
                     `motnome`= '$motNome',
                     `motrua`='$motRua',
@@ -117,6 +119,7 @@ class Motorista extends Connect {
                     `motdtadmissao`='$motDtAdmissao',
                     `motdtafast`= '$motDtAfast',
                     `motsituacao`='$motSituacao',
+                    `regrasjornada_rjocod`='$regrasjornada_rjocod',
                     WHERE `motcod`= '$motCod'";
 
     if ($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){

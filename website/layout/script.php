@@ -228,16 +228,26 @@ $header = '<header class="main-header">
 
       <li class="header">REGRAS DE JORNADA</li>
 
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-table"></i>
+          <span>Regras</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="'.$url.'regras/"><i class="fa fa-circle-o"></i>Lista de Regras</a></li>
+          <li><a href="'.$url.'regras/addregra.php"><i class="fa fa-circle-o"></i>Adicionar Regras</a></li>
+        </ul>
+      </li>
+
     </section>
     <!-- /.sidebar -->
   </aside>';
 
   $footer = '<footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.8
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+
   </footer>
 
   <!-- Control Sidebar -->

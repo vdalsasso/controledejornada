@@ -1,8 +1,7 @@
 <?php
 require_once '../../App/auth.php';
 require_once '../../layout/script.php';
-
-
+require_once '../../App/Models/regras.class.php';
 
 echo $head;
 echo $header;
@@ -111,7 +110,16 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
                   <input type="text" name="motsituacao" class="form-control" id="exampleInputEmail1" placeholder="Informe a situação...">
                 </div>
               
-              <!-- /.box-body -->
+                <label for="exampleInputEmail1">Nome da regra de jornada</label>
+
+                <select class="form-control" name="rjocod">
+                ';
+                $regras->listRegras();
+                echo '</select>
+  
+               '; 
+
+              echo ' <!-- /.box-body -->
 
               <div class="box-footer">
                 <button type="submit" name="upload" class="btn btn-primary" value="Cadastrar">Cadastrar</button>

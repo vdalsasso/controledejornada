@@ -49,89 +49,91 @@ class Regras extends Connect
  			
  		}
 
- 	}
+   }
+   
+   public function listRegras($value = NULL){
 
- 	public function InsertRegras($rjoNome, $rjoTrabInint, $rjoDesc, $rjoDescInint, $rjoRefeicao, $rjoMaxDia, $rjoExtra, $RjoEspRep, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao){
+    $this->query = "SELECT * FROM `regrasjornada`";
+    $this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
-    $this->query = "INSERT INTO `motorista`(`motcod`, `motnome`, `motrua`, `motbairro`, `motcidade`, `motestado`, `motemail`, `motsenha`, `motfone`, `motcpf`, `motrg`, `motcnh`, `motdtadmissao`, `motdtafast`, `motsituacao`) VALUES (NULL, '$motNome', '$motRua', '$motBairro', '$motCidade', '$motEstado', '$motEmail', '$motSenha', '$motFone', '$motCpf', '$motRg', '$motCnh', '$motDtAdmissao', '$motDtAfast','$motSituacao')";
+    if($this->result){
+    
+      while ($row = mysqli_fetch_array($this->result)) {
+            if($value == $row['rjocod']){ 
+               $selected = "selected";
+           }else{
+               $selected = "";
+           }
+        echo '<option value="'.$row['rjocod'].'" '.$selected.' >'.$row['rjonome'].'</option>';
+      }
+    }	
+  }
+
+ 	public function InsertRegras($rjoNome, $rjoTrabInint, $rjoDesc, $rjoDescInint, $rjoRefeicao, $rjoMaxDia, $rjoExtra, $rjoEspRep, $rjoDescInter){
+
+    $this->query = "INSERT INTO `regrasjornada`(`rjocod`, `rjonome`, `rjoTrabInint`, `rjoDesc`, `rjoDescInint`, `rjoRefeicao`, `rjoMaxDia`, `rjoExtra`, `rjoEspRep`, `rjoDescinter`) VALUES (NULL, '$rjoNome', '$rjoTrabInint', '$rjoDesc', '$rjoDescInint', '$rjoRefeicao', '$rjoMaxDia', '$rjoExtra', '$rjoEspRep', '$rjoDescInter')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
- 			header('Location: ../../views/motorista/index.php?alert=1');
+ 			header('Location: ../../views/regras/index.php?alert=1');
  		}else{
- 			header('Location: ../../views/motorista/index.php?alert=0');
+ 			header('Location: ../../views/regras/index.php?alert=0');
  		}
- 	}//InsertItens
+ 	}
 
-  public function editMotorista($value)
+  public function editRegras($value)
   {
-    $this->query = "SELECT *FROM `motorista` WHERE `motcod` = '$value'";
+    $this->query = "SELECT * FROM `regrasjornada` WHERE `rjocod` = '$value'";
     $this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
     if($row = mysqli_fetch_array($this->result)){
 
-      $motcod = $row['motcod'];
-      $motNome = $row['motnome'];
-      $motRua = $row['motrua'];
-      $motBairro = $row['motbairro'];
-      $motCidade = $row['motcidade'];
-      $motEstado = $row['motestado'];
-      $motEmail = $row['motemail'];
-      $motSenha = $row['motsenha'];
-      $motFone = $row['motfone'];
-      $motCpf = $row['motcpf'];
-      $motRg = $row['motrg'];
-      $motCnh = $row['motcnh'];
-      $motDtAdmissao = $row['motdtadmissao'];
-      $motDtAfast = $row['motdtafast'];
-      $motSituacao = $row['motsituacao'];
-        
-      return $resp = array('Itens' => ['motcod' => $motcod,
-      'motnome'   => $motNome,
-      'motrua' => $motRua,
-      'motbairro' => $motBairro,
-      'motcidade'   => $motCidade,
-      'motestado' => $motEstado,
-      'motemail' => $motEmail,
-      'motsenha'   => $motSenha,
-      'motfone' => $motFone,
-      'motcpf' => $motCpf,
-      'motrg'   => $motRg,
-      'motcnh' => $motCnh,
-      'motdtadmissao' => $motDtAdmissao,
-      'motdtafast'   => $motDtAfast,
-      'motsituacao' => $motSituacao] , ); 
+      $rjocod = $row['rjocod'];
+      $rjoNome = $row['rjonome'];
+      $rjoTrabInint = $row['rjotrabinint'];
+      $rjoDesc = $row['rjodesc'];
+      $rjoDescInint = $row['rjodescinint'];
+      $rjoRefeicao = $row['rjorefeicao'];
+      $rjoMaxDia = $row['rjomaxdia'];
+      $rjoExtra = $row['rjoextra'];
+      $rjoEspRep = $row['rjoesprep'];
+      $rjoDescInter = $row['rjodescinter'];
+
+      return $resp = array('Itens' => ['rjocod' => $rjocod,
+      'rjonome'   => $rjoNome,
+      'rjotrabinint' => $rjoTrabInint,
+      'rjodesc' => $rjoDesc,
+      'rjodescinint'   => $rjoDescInint,
+      'rjorefeicao' => $rjoRefeicao,
+      'rjomaxdia' => $rjoMaxDia,
+      'rjoextra'   => $rjoExtra,
+      'rjoesprep' => $rjoEspRep,
+      'rjodescinter' => $rjoDescInter] , ); 
      }
     
   }
 
-  public function updateMotorista($motCod, $motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao)
+  public function updateRegras($rjocod, $rjoNome, $rjoTrabInint, $rjoDesc, $rjoDescInint, $rjoRefeicao, $rjoMaxDia, $rjoExtra, $rjoEspRep, $rjoDescInter)
   {
-    $this->query = "UPDATE `motorista` SET 
-                    `motnome`= '$motNome',
-                    `motrua`='$motRua',
-                    `motbairro`='$motBairro',
-                    `motcidade`= '$motCidade',
-                    `motestado`='$motEstado',
-                    `motemail`='$motEmail',
-                    `motsenha`= '$motSenha',
-                    `motfone`='$motFone',
-                    `motcpf`='$motCpf',
-                    `motrg`= '$motRg',
-                    `motcnh`='$motCnh',
-                    `motdtadmissao`='$motDtAdmissao',
-                    `motdtafast`= '$motDtAfast',
-                    `motsituacao`='$motSituacao',
-                    WHERE `motcod`= '$motCod'";
+    $this->query = "UPDATE `regrasjornada` SET 
+                    `rjonome`= '$rjoNome',
+                    `rjotrabinint`='$rjoTrabInint',
+                    `rjodesc`='$rjoDesc',
+                    `rjodescinint`= '$rjoDescInint',
+                    `rjorefeicao`='$rjoRefeicao',
+                    `rjomaxdia`='$rjoMaxDia',
+                    `rjoextra`= '$rjoExtra',
+                    `rjoesprep`='$rjoEspRep',
+                    `rjodescinter`='$rjoDescInter'";
 
     if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
-      header('Location: ../../views/motorista/index.php?alert=1');
+      header('Location: ../../views/regras/index.php?alert=1');
     }else{
-      header('Location: ../../views/motorista/index.php?alert=0');
+      header('Location: ../../views/regras/index.php?alert=0');
     }
 
   }
 
  }
 
- $motoristas = new Motorista;
+ $regras = new Regras;

@@ -18,14 +18,16 @@ $motCnh = $_POST['motcnh'];
 $motDtAdmissao = $_POST['motdtadmissao'];
 $motDtAfast = $_POST['motdtafast'];
 $motSituacao = $_POST['motsituacao'];
+$regrasjornada_rjocod = $_POST['rjocod'];
+
 
 if($motNome != NULL){
 	if(isset($_POST['motcod'])){
 
 		$motCod = $_POST['motcod'];
-		$motoristas->editMotorista($motCod, $motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao);
+		$motoristas->editMotorista($motCod, $motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao, $regrasjornada_rjocod);
 	}else{
-		$motoristas->InsertMotorista($motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao);
+		$motoristas->InsertMotorista($motNome, $motRua, $motBairro, $motCidade, $motEstado, $motEmail, $motSenha, $motFone, $motCpf, $motRg, $motCnh, $motDtAdmissao, $motDtAfast, $motSituacao, $regrasjornada_rjocod);
 	}
 
 }else{
