@@ -48,7 +48,7 @@
  		
  			while ($row = mysqli_fetch_array($this->result)) {
        			if($value == $row['esccod']){ 
-          			$selected = "selected";
+          			$selected = "selected";//
         		}else{
           			$selected = "";
         		}
