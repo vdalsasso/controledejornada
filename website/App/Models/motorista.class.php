@@ -29,9 +29,6 @@ class Motorista extends Connect {
                   <!-- todo text -->
                   <span class="badge left">'.$row['motcod'].'</span> '.$row['motnome'].'</span>
 
-                  <!-- Emphasis label -->
-                  
-                  <!-- General tools such as edit or delete-->
                   <div class="tools right">
                     
                     <form class="right" name="editMotorista'.$row['motcod'].'" action="editMotorista.php" method="post">
