@@ -34,13 +34,7 @@ class Usuario extends Connect
                   <!-- todo text -->
                   <span class="badge left">'.$row['usucod'].'</span> '.$row['usuusername'].'
                    - '.$row['usunome'].'
-                  - '.$row['usuemail'].'
-                  - '.$row['ususenha'].'
-                  - '.$row['usuimagem'].'
-                  - '.$row['usufone'].'
-                  - '.$row['usupermissao'].'
-                  - '.$row['usuativo'].'
-                  - '.$row['escopo_esccod'].'</span>
+                  - '.$row['usuemail'].'</span>
 
                   <!-- Emphasis label -->
                   

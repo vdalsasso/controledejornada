@@ -10,11 +10,11 @@ echo '<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Usuarios cadastrados
+        Usuários cadastrados
       </h1>
       <ol class="breadcrumb">
         <li><a href="../"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Usuarios</li>
+        <li class="active">Usuários</li>
       </ol>
     </section>
 
@@ -29,7 +29,7 @@ echo '<div class="content-wrapper">
             <div class="box-header">
               <i class="ion ion-clipboard"></i>
 
-              <h3 class="box-title">Lista de Usuarios</h3>
+              <h3 class="box-title">Lista de Usuários</h3>
 
               <div class="box-tools pull-right">
                 <ul class="pagination pagination-sm inline">
@@ -50,7 +50,7 @@ echo '<div class="content-wrapper">
             </div>
             <!-- /.box-body -->
             <div class="box-footer clearfix no-border">
-              <a href="addusuario.php" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add Usuarios</a>
+              <a href="addusuario.php" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Adicionar Usuários</a>
             </div>
           </div>
 	 
