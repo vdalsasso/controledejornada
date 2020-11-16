@@ -242,6 +242,22 @@ $header = '<header class="main-header">
         </ul>
       </li>
 
+      <li class="header">CADASTRO DE JORNADAS</li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-table"></i>
+          <span>Jornadas</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="'.$url.'jornada/"><i class="fa fa-circle-o"></i>Lista de Jornadas</a></li>
+          <li><a href="'.$url.'jornada/addjornada.php"><i class="fa fa-circle-o"></i>Adicionar Jornadas</a></li>
+        </ul>
+      </li>
+
     </section>
     <!-- /.sidebar -->
   </aside>';

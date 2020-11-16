@@ -110,7 +110,7 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
                   <input type="text" name="motsituacao" class="form-control" id="exampleInputEmail1" placeholder="Informe a situação...">
                 </div>
               
-                <label for="exampleInputEmail1">Nome da regra de jornada</label>
+                <label for="exampleInputEmail1">Regra de jornada:</label>
 
                 <select class="form-control" name="rjocod">
                 ';

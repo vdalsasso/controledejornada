@@ -103,6 +103,24 @@ class Veiculo extends Connect
     }
 
   }
+
+  public function listVeiculo($value = NULL){
+
+		$this->query = "SELECT * FROM `veiculo`";
+		$this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
+
+		if($this->result){
+		
+			while ($row = mysqli_fetch_array($this->result)) {
+				  if($value == $row['veicod']){ 
+					 $selected = "selected";
+			   }else{
+					 $selected = "";
+			   }
+				echo '<option value="'.$row['veicod'].'" '.$selected.' >'.$row['veinome'].'</option>';
+			}
+		}	
+	}
  }
 
  $veiculos = new Veiculo;
