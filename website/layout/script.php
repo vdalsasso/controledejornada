@@ -253,8 +253,8 @@ $header = '<header class="main-header">
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="'.$url.'regras/"><i class="fa fa-circle-o"></i>Lista de Regras</a></li>
-          <li><a href="'.$url.'regras/addregra.php"><i class="fa fa-circle-o"></i>Adicionar Regras</a></li>
+          <li><a href="'.$url.'jornada/"><i class="fa fa-circle-o"></i>Lista de Jornadas</a></li>
+          <li><a href="'.$url.'jornada/addjornada.php"><i class="fa fa-circle-o"></i>Adicionar Jornadas</a></li>
         </ul>
       </li>
 

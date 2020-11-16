@@ -11,7 +11,7 @@
  	
  	public function index()
  	{
- 		$this->query = "SELECT * FROM `cidade`";
+ 		$this->query = "SELECT * FROM `estado`";
  		$this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
  		if($this->result){
@@ -24,9 +24,9 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <!-- checkbox -->
-                  <input type="checkbox" value="'.$row['esccod'].'">
+                  <input type="checkbox" value="'.$row['estcod'].'">
                   <!-- todo text -->
-                  <span class="text"><span class="badge left">'.$row['esccod'].'</span> '.$row['escnome'].'</span>
+                  <span class="text"><span class="badge left">'.$row['estcod'].'</span> '.$row['estnome'].'</span>
                   <!-- Emphasis label -->
                   <!-- <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small> -->
                   <!-- General tools such as edit or delete-->
@@ -39,34 +39,34 @@
  		}
  	}
 
- 	public function listEscopo($value = NULL){
+ 	public function listEstado($value = NULL){
 
- 		$this->query = "SELECT * FROM `escopo`";
+ 		$this->query = "SELECT * FROM `estado`";
  		$this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
 
  		if($this->result){
  		
  			while ($row = mysqli_fetch_array($this->result)) {
-       			if($value == $row['esccod']){ 
+       			if($value == $row['estcod']){ 
           			$selected = "selected";//
         		}else{
           			$selected = "";
         		}
- 				echo '<option value="'.$row['esccod'].'" '.$selected.' >'.$row['escnome'].'</option>';
+ 				echo '<option value="'.$row['estcod'].'" '.$selected.' >'.$row['estnome'].'</option>';
  			}
  		}	
  	}
 
- 	public function InsertEscopo($escNome){
+ 	public function InsertEstado($estNome, $estSigla){
 
- 		$this->query = "INSERT INTO `escopo`(`esccod`, `escnome`) VALUES (NULL,'$escNome')";
+ 		$this->query = "INSERT INTO `estado`(`estcod`, `estnome`,`estsigla`) VALUES (NULL,'$estNome','$estSigla')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
- 			header('Location: ../../views/escopo/index.php?alert=1');
+ 			header('Location: ../../views/estado/index.php?alert=1');
  		}else{
- 			header('Location: ../../views/escopo/index.php?alert=0');
+ 			header('Location: ../../views/estado/index.php?alert=0');
  		}
  	}
  }
 
- $escopo = new Escopo;
+ $estados = new Estado;

@@ -41,32 +41,32 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
             </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Username</label>
+                  <label for="exampleInputEmail1">Nome de Usuário (username para acesso):</label>
                   <input type="text" name="usuusername" class="form-control" id="exampleInputEmail1" placeholder="Informe o nome utilizado para acesso...">
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nome</label>
+                  <label for="exampleInputEmail1">Nome da Pessoa:</label>
                   <input type="text" name="usunome" class="form-control" id="exampleInputEmail1" placeholder="Informe o nome da pessoa...">
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
+                  <label for="exampleInputEmail1">Email:</label>
                   <input type="text" name="usuemail" class="form-control" id="exampleInputEmail1" placeholder="Informe o E-mail...">
                 </div>
                 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Senha</label>
+                  <label for="exampleInputEmail1">Senha de acesso:</label>
                   <input type="password" name="ususenha" class="form-control" id="exampleInputEmail1" placeholder="Informe a senha de acesso...">
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Imagem</label>
+                  <label for="exampleInputEmail1">Imagem:</label>
                   <input type="text" name="usuimagem" class="form-control" id="exampleInputEmail1" placeholder="Imagem para o usuário">
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Fone</label>
+                  <label for="exampleInputEmail1">Fone:</label>
                   <input type="text" name="usufone" class="form-control" id="exampleInputEmail1" placeholder="Fone do usuário...">
                 </div>
 

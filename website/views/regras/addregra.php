@@ -44,7 +44,7 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Valor máximo de horas de trabalho ininterrupto:</label>
+                <label for="exampleInputEmail1">Valor máximo de horas de trabalho ininterruptas:</label>
                 <input type="text" name="rjotrabinint" class="form-control" id="exampleInputEmail1" placeholder="Horas de trab inint...">
               </div>
 
@@ -54,7 +54,7 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
               </div>
               
               <div class="form-group">
-                <label for="exampleInputEmail1">Horas minimas de descanso diário</label>
+                <label for="exampleInputEmail1">Mínimo de horas de descanso diário:</label>
                 <input type="text" name="rjodescinint" class="form-control" id="exampleInputEmail1" placeholder="Horas minimas de descanso interrupto...">
               </div>
 
@@ -64,17 +64,17 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Horas máximas de trabalho (regular) por dia:</label>
+                <label for="exampleInputEmail1">Máximo de horas de trabalho (regular) por dia:</label>
                 <input type="text" name="rjomaxdia" class="form-control" id="exampleInputEmail1" placeholder="horas máximas por dia...">
               </div>
               
             <div class="form-group">
-              <label for="exampleInputEmail1">Horas extras máxima por dia:</label>
+              <label for="exampleInputEmail1">Valor máximo de horas extras por dia:</label>
               <input type="text" name="rjoextra" class="form-control" id="exampleInputEmail1" placeholder="horas extra...">
             </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Horas de espera necessário para que seja considerado repouso:</label>
+                <label for="exampleInputEmail1">Horas de espera necessárias para que seja considerado repouso:</label>
                 <input type="text" name="rjoesprep" class="form-control" id="exampleInputEmail1" placeholder="horas de espera...">
               </div>
 
