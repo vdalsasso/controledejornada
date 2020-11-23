@@ -72,7 +72,7 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
                 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Senha:</label>
-                  <input type="text" name="motsenha" class="form-control" id="exampleInputEmail1" placeholder="Informe a senha...">
+                  <input type="password" name="motsenha" class="form-control" id="exampleInputEmail1" placeholder="Informe a senha...">
                 </div>
 
                 <div class="form-group">
@@ -97,12 +97,12 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Data admissão:</label>
-                  <input type="text" name="motdtadmissao" class="form-control" id="exampleInputEmail1" placeholder="Informe a data de admissao...">
+                  <input type="date" name="motdtadmissao" class="form-control" id="exampleInputEmail1" placeholder="Informe a data de admissao...">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Data afastamento:</label>
-                  <input type="text" name="motdtafast" class="form-control" id="exampleInputEmail1" placeholder="Informe a data de afast...">
+                  <input type="date" name="motdtafast" class="form-control" id="exampleInputEmail1" placeholder="Informe a data de afast...">
                 </div>
 
                 <div class="form-group">
