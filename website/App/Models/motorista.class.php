@@ -15,20 +15,19 @@ class Motorista extends Connect {
  		if($this->result){
  		
  			while ($row = mysqli_fetch_array($this->result)) {
- 				echo '<li>
+                  echo '<li>
                   <!-- drag handle -->
                       <span class="handle">
                         <i class="fa fa-ellipsis-v"></i>
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
-                  <span class="text">
                   <!-- checkbox -->
-                  <form class="badge" name="ativ'.$row['motcod'].'" action="action.php" method="post">
-                  <input type="hidden" name="id" id="id" value="'.$row['motcod'].'">
-                  <input type="checkbox" id="status" name="status"</form>
+                  <input type="checkbox" value="'.$row['motcod'].'">
+
                   <!-- todo text -->
                   <span class="badge left">'.$row['motcod'].'</span> '.$row['motnome'].'</span>
-
+                ';
+                /*
                   <div class="tools right">
                     
                     <form class="right" name="editMotorista'.$row['motcod'].'" action="editMotorista.php" method="post">
@@ -38,6 +37,11 @@ class Motorista extends Connect {
                     <input type="hidden" name="motcod" id="motcod" value="'.$row['motcod'].'">
                      <a href="#" type="button" onclick="this.form.submit();"><i class="fa fa-trash-o"></i></a></form>
                   </div>
+*/              echo '
+                <div class="tools">
+                  <a href="editMotorista.php?id='.$row['motcod'].'"<i class="fa fa-edit"></i></a>
+                  <i class="fa fa-trash-o"></i>
+                </div>
                 </li>';
                  				
  			}
