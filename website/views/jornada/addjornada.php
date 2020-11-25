@@ -70,7 +70,7 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Horas Extras:</label>
-                  <input type="time" name="jorext" class="form-control" id="exampleInputEmail1" min="00:00" max="24:00" placeholder="Horas extras:">
+                  <input type="time" name="jorhoraext" class="form-control" id="exampleInputEmail1" min="00:00" max="24:00" placeholder="Horas extras:">
                 </div>
                 
                 <div class="form-group">
@@ -90,12 +90,12 @@ echo ' <a href="./" class="btn btn-success">Voltar</a>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Hora de Início de Espera:</label>
-                  <input type="time" name="jortitulo" class="form-control" id="exampleInputEmail1" min="00:00" max="24:00" placeholder="Hora de início..:">
+                  <input type="time" name="jorespinicial" class="form-control" id="exampleInputEmail1" min="00:00" max="24:00" placeholder="Hora de início..:">
                 </div>
                 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Hora de Término de Espera:</label>
-                  <input type="time" name="jortitulo" class="form-control" id="exampleInputEmail1" min="00:00" max="24:00" placeholder="Hora de término.."">
+                  <input type="time" name="jorespfinal" class="form-control" id="exampleInputEmail1" min="00:00" max="24:00" placeholder="Hora de término.."">
                 </div>
 
                 <label for="exampleInputEmail1">Motorista:</label>

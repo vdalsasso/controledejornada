@@ -117,7 +117,7 @@ class Veiculo extends Connect
 			   }else{
 					 $selected = "";
 			   }
-				echo '<option value="'.$row['veicod'].'" '.$selected.' >'.$row['veinome'].'</option>';
+				echo '<option value="'.$row['veicod'].'" '.$selected.' >'.$row['veimodelo'].'</option>';
 			}
 		}	
 	}
