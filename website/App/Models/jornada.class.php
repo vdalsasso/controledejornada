@@ -48,7 +48,7 @@ class Jornada extends Connect {
 
  	public function InsertJornada($jorTitulo, $jorDia, $jorHoraInicial, $jorHoraFinal, $jorRefInicial, $jorRefFinal, $jorHoraExt, $jorDescanso, $jorInterInicial, $jorInterFinal, $jorEspInicial, $jorEspFinal, $motorista_motcod, $cidade_cidcodinicial, $cidade_cidcodfinal, $veiculo_veicod){ //$jorTitulo, $jorDia, $jorHoraInicial, $jorHoraFinal, $jorRefInicial, $jorRefFinal, $jorHoraExt, $jorDescanso, $jorInterInicial, $jorInterFinal, $jorEspInicial, $jorEspFinal, $motorista_motcod, $cidade_cidcodinicial, $cidade_cidcodfinal, $veiculo_veicod
 
-    $this->query = "INSERT INTO `jornada`(`jorcod`, `jortitulo`, `jordia`, `jorhorainicial`, `jorhorafinal`, `jorerefinicial`, `jorereffinal`,`jorhoraext`, `jordescanso`, `jorinterinicial`, `jorinterfinal`, `jorespinicial`, `jorespfinal`, `motorista_motcod`, `cidade_cidcodinicial`, `cidade_cidcodfinal`, `veiculo_veicod`, `usuario_usucod`) VALUES (NULL, '$jorTitulo', '$jorDia', '$jorHoraInicial', '$jorHoraFinal', '$jorRefInicial', '$jorRefFinal', '$jorHoraExt', '$jorDescanso', '$jorInterInicial', '$jorInterFinal', '$jorEspInicial', '$jorEspFinal', '$motorista_motcod','$cidade_cidcodinicial','$cidade_cidcodfinal','$veiculo_veicod')";
+    $this->query = "INSERT INTO `jornada`(`jorcod`, `jortitulo`, `jordia`, `jorhorainicial`, `jorhorafinal`, `jorrefinicial`, `jorreffinal`,`jorhoraext`, `jordescanso`, `jorinterinicial`, `jorinterfinal`, `jorespinicial`, `jorespfinal`, `motorista_motcod`, `cidade_cidcodinicial`, `cidade_cidcodfinal`, `veiculo_veicod`) VALUES (NULL, '$jorTitulo', '$jorDia', '$jorHoraInicial', '$jorHoraFinal', '$jorRefInicial', '$jorRefFinal', '$jorHoraExt', '$jorDescanso', '$jorInterInicial', '$jorInterFinal', '$jorEspInicial', '$jorEspFinal', '$motorista_motcod','$cidade_cidcodinicial','$cidade_cidcodfinal','$veiculo_veicod')";
  		if($this->result = mysqli_query($this->SQL, $this->query) or die(mysqli_error($this->SQL))){
 
  			header('Location: ../../views/jornada/index.php?alert=1');
@@ -57,46 +57,49 @@ class Jornada extends Connect {
  		}
  	}//InsertItens
 
-  public function editJornada($value) {
-    $this->query = "SELECT *FROM `jornada` WHERE `jorcod` = '$value'";
-    $this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL));
-
-    if($row = mysqli_fetch_array($this->result)){
-//
-      $motcod = $row['motcod'];
-      $motNome = $row['motnome'];
-      $motRua = $row['motrua'];
-      $motBairro = $row['motbairro'];
-      $motCidade = $row['motcidade'];
-      $motEstado = $row['motestado'];
-      $motEmail = $row['motemail'];
-      $motSenha = $row['motsenha'];
-      $motFone = $row['motfone'];
-      $motCpf = $row['motcpf'];
-      $motRg = $row['motrg'];
-      $motCnh = $row['motcnh'];
-      $motDtAdmissao = $row['motdtadmissao'];
-      $motDtAfast = $row['motdtafast'];
-      $motSituacao = $row['motsituacao'];
-      $regrasjornada_rjocod = $row['regrasjornada_rjocod'];
-        
-      return $resp = array('Itens' => ['motcod' => $motcod,
-      'motnome'   => $motNome,
-      'motrua' => $motRua,
-      'motbairro' => $motBairro,
-      'motcidade'   => $motCidade,
-      'motestado' => $motEstado,
-      'motemail' => $motEmail,
-      'motsenha'   => $motSenha,
-      'motfone' => $motFone,
-      'motcpf' => $motCpf,
-      'motrg'   => $motRg,
-      'motcnh' => $motCnh,
-      'motdtadmissao' => $motDtAdmissao,
-      'motdtafast'   => $motDtAfast,
-      'motsituacao' => $motSituacao,
-      'regrasjornada_rjocod' => $regrasjornada_rjocod] , ); 
-     }
+  public function editJornada($jorcod) {
+    $this->query = "SELECT *FROM `jornada` WHERE `jorcod` = '$jorcod'";
+    if ($this->result = mysqli_query($this->SQL, $this->query) or die ( mysqli_error($this->SQL))) {
+      
+      if($row = mysqli_fetch_array($this->result)){
+        //
+        $motcod = $row['motcod'];
+        $motNome = $row['motnome'];
+        $motRua = $row['motrua'];
+        $motBairro = $row['motbairro'];
+        $motCidade = $row['motcidade'];
+        $motEstado = $row['motestado'];
+        $motEmail = $row['motemail'];
+        $motSenha = $row['motsenha'];
+        $motFone = $row['motfone'];
+        $motCpf = $row['motcpf'];
+        $motRg = $row['motrg'];
+        $motCnh = $row['motcnh'];
+        $motDtAdmissao = $row['motdtadmissao'];
+        $motDtAfast = $row['motdtafast'];
+        $motSituacao = $row['motsituacao'];
+        $regrasjornada_rjocod = $row['regrasjornada_rjocod'];
+          
+        return $array = array('Itens' => ['motcod' => $motcod,
+        'motnome'   => $motNome,
+        'motrua' => $motRua,
+        'motbairro' => $motBairro,
+        'motcidade'   => $motCidade,
+        'motestado' => $motEstado,
+        'motemail' => $motEmail,
+        'motsenha'   => $motSenha,
+        'motfone' => $motFone,
+        'motcpf' => $motCpf,
+        'motrg'   => $motRg,
+        'motcnh' => $motCnh,
+        'motdtadmissao' => $motDtAdmissao,
+        'motdtafast'   => $motDtAfast,
+        'motsituacao' => $motSituacao,
+        'regrasjornada_rjocod' => $regrasjornada_rjocod] , ); 
+      }
+    } else {
+      return 0;
+    }
     
   }
 
